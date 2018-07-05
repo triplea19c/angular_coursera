@@ -23,11 +23,9 @@
   </div>
 
   <div fxFlex="40">
-      <div>
+      <mat-list *ngIf="dish">
         <h1 mat-line>Comments</h1>
-      </div>
-      <mat-list *ngFor="let food of dish.comments">
-        <mat-list-item>
+        <mat-list-item *ngFor="let food of dish.comments">
             <p mat-line>{{food.comment}}</p>  
             <p mat-line>{{food.rating}} Stars</p>
             <p mat-line>--{{food.author}} {{food.date | date}}</p>
